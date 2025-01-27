@@ -3,6 +3,7 @@
 import { ReactLenis } from "lenis/react"
 import { useRef } from 'react'
 import Parallaximage from "./Parallaximage";
+import Footer from "./Footer";
 
 export default function Home() {
   
@@ -17,11 +18,11 @@ export default function Home() {
           <section className="hero">
             <div className="img">
               <Parallaximage src="/images/img1.jpg" alt="img" />
-              <div className="nav">
-                <p>home</p>
-                <p>about</p>
-                <p>services</p>
-                <p>contact</p>
+              <div className="nav backdrop-blur-sm">
+                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">home</p>
+                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">about</p>
+                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">services</p>
+                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">contact</p>
               </div>
             </div>
           </section>
@@ -123,6 +124,7 @@ export default function Home() {
           </section>
 
         </div>
+        <Footer />
       </ReactLenis>
     </>
   );
