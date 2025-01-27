@@ -1,101 +1,129 @@
-import Image from "next/image";
+"use client";
+
+import { ReactLenis } from "lenis/react"
+import { useRef } from 'react'
+import Parallaximage from "./Parallaximage";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+  const lenisRef = useRef()
+
+  return (
+    <>
+      <ReactLenis ref={lenisRef} style={{ height: '100vh', overflowY: 'auto' }}>
+        <div className="app">
+          <section className="hero">
+            <div className="img">
+              <Parallaximage src="/images/img1.jpg" alt="img" />
+              <div className="nav">
+                <p>home</p>
+                <p>about</p>
+                <p>services</p>
+                <p>contact</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="projects">
+            <div className="img">
+              <Parallaximage src="/images/img2.jpg" alt="img" />
+            </div>
+
+            <div className="projects-brief">
+              <p>
+              Lorem ipsum dolor sit amet. Quo nesciunt molestias qui laboriosam explicabo qui repellendus vitae At culpa quam sit rerum alias. Aut eius necessitatibus et ipsum beatae et corrupti rerum aut dolores delectus est voluptas similique. Ut explicabo nihil rem dolorum magnam non reiciendis aperiam aut sunt internos hic quos aliquid id sint excepturi. 
+              </p>
+            </div>
+
+            <div className="col projects-cover">
+              <div>
+                <Parallaximage src="/images/img4.jpg" alt="img" />
+              </div>
+            </div>
+
+            <div className="col projects-list">
+              <div className="project">
+                <h1>Sunrise</h1>
+                <p>Apple Music / spotify / Youtube</p>
+              </div>
+              <div className="project">
+                <h1>Echos Within</h1>
+                <p>Apple Music / spotify / Youtube</p>
+              </div>
+              <div className="project">
+                <h1>Fading Memories</h1>
+                <p>Apple Music / spotify / Youtube</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="about">
+            <div className="col intro">
+              <p>introduction</p>
+              <p>Lorem ipsum dolor sit amet. Quo nesciunt molestias qui laboriosam explicabo qui repellendus vitae At culpa quam sit rerum alias. Aut eius necessitatibus et ipsum beatae et corrupti rerum aut dolores delectus est voluptas similique. Ut explicabo nihil rem dolorum magnam non reiciendis aperiam aut sunt internos hic quos aliquid id sint excepturi. </p>
+            </div>
+
+            <div className="col portrait">
+              <div className="portrait-container">
+                <div className="img">
+                  <Parallaximage src="/images/img5.jpg" alt="img" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="banner">
+            <div className="img">
+              <Parallaximage src="/images/img6.jpg" alt="img" />
+            </div>
+
+            <div className="banner-copy">
+              <p>be the</p>
+              <h1>first to know</h1>
+              <p>want to hear the latest about us</p>
+              <button>join the newsletter</button>
+            </div>
+          </section>
+
+          <section className="footer">
+            <div className="col">
+              <div className="social">
+                <p>Instagram</p>
+                <p>Tiktok</p>
+                <p>Discord</p>
+              </div>
+              <div className="footer-links"> 
+                <p>Menu</p>
+                <h1>Tour</h1>
+                <h1>Updates</h1>
+                <h1>Merch</h1>
+                <h1>Contact</h1>
+              </div>
+              <p>&copy; Groupe Chabane</p>
+            </div>
+            <div className="col">
+              <p>
+                Join the newsletter <br /> 
+                <button>Subscribe</button>
+              </p>
+              <div className="shop">
+                <div className="img">
+                  <Parallaximage src="/images/img7.jpg" alt="img" />
+                </div>
+              </div>
+              <div className="test">
+                <p>test1</p>
+                <p>test2</p>
+                <p>test3</p>
+              </div>
+              
+            </div>
+          </section>
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </ReactLenis>
+    </>
   );
 }
