@@ -2,32 +2,29 @@
 
 import { ReactLenis } from "lenis/react"
 import { useRef } from 'react'
-import Parallaximage from "./Parallaximage";
-import Footer from "./Footer";
+import Parallaximage from "./components/Parallaximage";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Navbar from "./components/Navbar";
+
 
 export default function Home() {
-  
-
 
   const lenisRef = useRef()
 
   return (
     <>
       <ReactLenis ref={lenisRef} style={{ height: '100vh', overflowY: 'auto' }}>
+        <ScrollToTop />
         <div className="app">
-          <section className="hero">
-            <div className="img">
+          <section id="home" className="hero">
+          <div className="img">
               <Parallaximage src="/images/img1.jpg" alt="img" />
-              <div className="nav backdrop-blur-sm">
-                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">home</p>
-                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">about</p>
-                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">services</p>
-                <p className="text-black border-b-2 border-transparent hover:border-[#cea678] hover:scale-125 duration-200 text-lg">contact</p>
-              </div>
+              <Navbar />
             </div>
           </section>
 
-          <section className="projects">
+          <section id="services" className="projects">
             <div className="img">
               <Parallaximage src="/images/img2.jpg" alt="img" />
             </div>
@@ -60,7 +57,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="about">
+          <section id="about" className="about">
             <div className="col intro">
               <p>introduction</p>
               <p>Lorem ipsum dolor sit amet. Quo nesciunt molestias qui laboriosam explicabo qui repellendus vitae At culpa quam sit rerum alias. Aut eius necessitatibus et ipsum beatae et corrupti rerum aut dolores delectus est voluptas similique. Ut explicabo nihil rem dolorum magnam non reiciendis aperiam aut sunt internos hic quos aliquid id sint excepturi. </p>
@@ -88,7 +85,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="footer">
+          <section id="contact" className="footer">
             <div className="col">
               <div className="social">
                 <p>Instagram</p>
@@ -122,7 +119,6 @@ export default function Home() {
               
             </div>
           </section>
-
         </div>
         <Footer />
       </ReactLenis>
