@@ -1,5 +1,8 @@
 // components/Footer.js
 import Link from 'next/link';
+import { FaFacebookSquare } from "react-icons/fa";
+import { RxLinkedinLogo } from "react-icons/rx";
+import { CgInstagram } from "react-icons/cg";
 
 const Footer = () => {
   return (
@@ -56,17 +59,14 @@ const Footer = () => {
             <div>
                 <h3 className="text-xl font-bold mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-                    <span className="text-gray-400 hover:text-white cursor-pointer">Twitter</span>
-                </Link>
                 <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                    <span className="text-gray-400 hover:text-white cursor-pointer">Facebook</span>
+                    <FaFacebookSquare className='hover:scale-[1.1] duration-200' size={30}/>
                 </Link>
                 <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                    <span className="text-gray-400 hover:text-white cursor-pointer">Instagram</span>
+                    <CgInstagram className='hover:scale-[1.1] duration-200' size={30}/>
                 </Link>
                 <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                    <span className="text-gray-400 hover:text-white cursor-pointer">LinkedIn</span>
+                    <RxLinkedinLogo className='hover:scale-[1.1] duration-200' size={30}/>
                 </Link>
                 </div>
             </div>
