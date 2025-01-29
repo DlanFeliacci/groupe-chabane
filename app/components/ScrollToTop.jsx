@@ -41,7 +41,9 @@ const ScrollToTop = () => {
     <button
       onClick={handleClick}
       style={{
-        display: 'block',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         position: 'fixed',
         bottom: '20px',
         right: '20px',
