@@ -6,6 +6,7 @@ import Parallaximage from "./components/Parallaximage";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
+import TheyTrustUs from "./components/TheyTrustUs";
 
 
 export default function Home() {
@@ -17,14 +18,14 @@ export default function Home() {
       <ReactLenis ref={lenisRef} style={{ height: '100vh', overflowY: 'auto' }}>
         <ScrollToTop />
         <div className="app">
-          <section id="home" className="hero">
+          <section id="home" className="hero page-section">
           <div className="img">
               <Parallaximage src="/images/img1.jpg" alt="img" />
               <Navbar />
             </div>
           </section>
 
-          <section id="services" className="projects">
+          <section id="services" className="projects page-section">
             <div className="img">
               <Parallaximage src="/images/img2.jpg" alt="img" />
             </div>
@@ -57,7 +58,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="about" className="about">
+          <section id="about" className="about page-section">
             <div className="col intro">
               <p>introduction</p>
               <p>Lorem ipsum dolor sit amet. Quo nesciunt molestias qui laboriosam explicabo qui repellendus vitae At culpa quam sit rerum alias. Aut eius necessitatibus et ipsum beatae et corrupti rerum aut dolores delectus est voluptas similique. Ut explicabo nihil rem dolorum magnam non reiciendis aperiam aut sunt internos hic quos aliquid id sint excepturi. </p>
@@ -72,7 +73,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section className="banner">
+          <section className="banner page-section">
             <div className="img">
               <Parallaximage src="/images/img6.jpg" alt="img" />
             </div>
@@ -85,7 +86,7 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="footer">
+          <section id="contact" className="footer page-section">
             <div className="col">
               <div className="social">
                 <p>Instagram</p>
@@ -120,6 +121,7 @@ export default function Home() {
             </div>
           </section>
         </div>
+        <TheyTrustUs />
         <Footer />
       </ReactLenis>
     </>
