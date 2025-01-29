@@ -9,6 +9,7 @@ export default function TheyTrustUs() {
     { id: 3, logo: '/assets/samsung.png', alt: 'Partner 3' },
     { id: 4, logo: '/assets/shneider-electric.png', alt: 'Partner 4' },
     { id: 5, logo: '/assets/totalgaz.png', alt: 'Partner 5' },
+    { id: 6, logo: '/assets/petrofac.png', alt: 'Partner 6' },
   ];
 
   return (
