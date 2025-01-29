@@ -245,3 +245,46 @@ button {
   .animate-marquee2 {
     animation: marquee2 30s linear infinite;
   }
+
+  /* Responsive styles for the TheyTrustUs section */
+@media (max-width: 768px) {
+    /* Adjust container spacing */
+    .animate-marquee,
+    .animate-marquee2 {
+      animation-duration: 15s; /* Faster on mobile */
+    }
+  
+    /* Adjust logo containers */
+    .animate-marquee > div,
+    .animate-marquee2 > div {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  
+    /* Adjust logo sizes */
+    .animate-marquee .relative,
+    .animate-marquee2 .relative {
+      width: 120px !important;
+      height: 35px !important;
+    }
+  
+    /* Adjust title size */
+    .container h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Tablet and larger screens */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .animate-marquee > div,
+    .animate-marquee2 > div {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  
+    .animate-marquee .relative,
+    .animate-marquee2 .relative {
+      width: 120px !important;
+      height: 30px !important;
+    }
+  }
