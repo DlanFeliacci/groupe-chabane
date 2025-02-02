@@ -87,13 +87,8 @@ export default function Home() {
             </div>
           </section>
 
-          <section id="contact" className="footer page-section">
+          <section className="footer page-section">
             <div className="col">
-              <div className="social">
-                <p>Instagram</p>
-                <p>Tiktok</p>
-                <p>Discord</p>
-              </div>
               <div className="footer-links"> 
                 <p>Menu</p>
                 <h1>Tour</h1>
@@ -101,24 +96,13 @@ export default function Home() {
                 <h1>Merch</h1>
                 <h1>Contact</h1>
               </div>
-              <p>&copy; Groupe Chabane</p>
             </div>
             <div className="col">
-              <p>
-                Join the newsletter <br /> 
-                <button>Subscribe</button>
-              </p>
               <div className="shop">
                 <div className="img">
                   <Parallaximage src="/images/img7.jpg" alt="img" />
                 </div>
-              </div>
-              <div className="test">
-                <p>test1</p>
-                <p>test2</p>
-                <p>test3</p>
-              </div>
-              
+              </div>     
             </div>
           </section>
         </div>

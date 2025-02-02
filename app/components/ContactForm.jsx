@@ -97,7 +97,7 @@ const ContactForm = () => {
 
   return (
     <div id="contact" className="w-full max-w-2xl mx-auto p-8">
-      <h2 className="text-[#dbccc0] text-4xl mb-8 font-['PP_Editorial_Old']">Contact Us</h2>
+      <h2 className="text-[#dbccc0] text-4xl mb-8 ">Contact Us</h2>
       
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
