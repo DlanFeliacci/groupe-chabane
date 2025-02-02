@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import TheyTrustUs from "./components/TheyTrustUs";
+import ContactForm from "./components/ContactForm";
 
 
 export default function Home() {
@@ -121,6 +122,7 @@ export default function Home() {
             </div>
           </section>
         </div>
+        <ContactForm />
         <TheyTrustUs />
         <Footer />
       </ReactLenis>

@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="container mx-auto px-12">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {/* Column 1: About */}
-            <div>
+            <div className='text-center'>
                 <h3 className="text-xl font-bold mb-4">About Us</h3>
                 <p className="text-gray-400">
                 We are a company dedicated to providing the best services and solutions for our customers.
@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
 
             {/* Column 2: Quick Links */}
-            <div>
+            <div className='text-center'>
                 <h3 className="text-xl font-bold mb-4">Quick Links</h3>
                 <ul className="space-y-2">
                 <li>
@@ -46,7 +46,7 @@ const Footer = () => {
             </div>
 
             {/* Column 3: Contact Info */}
-            <div>
+            <div className='text-center'>
                 <h3 className="text-xl font-bold mb-4">Contact Us</h3>
                 <ul className="text-gray-400 space-y-2">
                 <li>Email: info@example.com</li>
@@ -56,9 +56,9 @@ const Footer = () => {
             </div>
 
             {/* Column 4: Social Media */}
-            <div>
+            <div className='text-center'>
                 <h3 className="text-xl font-bold mb-4">Follow Us</h3>
-                <div className="flex space-x-4">
+                <div className="flex justify-center space-x-4">
                 <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                     <FaFacebookSquare className='hover:scale-[1.1] duration-200' size={30}/>
                 </Link>
