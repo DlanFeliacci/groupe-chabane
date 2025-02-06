@@ -19,6 +19,7 @@ export default function Home() {
       <ReactLenis ref={lenisRef} style={{ height: '100vh', overflowY: 'auto' }}>
         <ScrollToTop />
         <div className="app">
+          {console.log("test")}
           <section id="home" className="hero page-section">
           <div className="img">
               <Parallaximage src="/images/img1.jpg" alt="img" />
